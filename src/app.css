@@ -1,0 +1,40 @@
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.45px;
+}
+
+.checkbox-container {
+  background-color: #f8f8fc;
+  padding: 28px 30px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+#loading-spinner {
+  display: none;
+}
+#loading-spinner.display {
+  display: block;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.card-container {
+}
