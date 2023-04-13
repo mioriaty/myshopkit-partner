@@ -38,3 +38,62 @@ body {
 
 .card-container {
 }
+
+._card-header__image {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+._card-header {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+._card-body__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #08074e;
+  margin-bottom: 10px;
+}
+
+._card-body__description {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #17174f;
+}
+
+._card-footer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  color: #6d6d9c;
+  font-style: italic;
+}
+
+._card-header__button {
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #3540df;
+  background-color: white;
+  color: #3540df;
+}
+
+._card-header__button:hover {
+  background-color: #3540df;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .my_checkbox {
+    width: 50%;
+  }
+}
+
+.card:hover {
+  border: 1px solid #3540df;
+}
