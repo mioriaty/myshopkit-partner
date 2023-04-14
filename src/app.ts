@@ -31,6 +31,19 @@ function debounce<T extends (...args: any[]) => any>(
   };
 }
 
+function compareArrays<T>(arr1: T[], arr2: T[]): boolean {
+  // loop through the first array
+  for (let i = 0; i < arr1.length; i++) {
+    const element = arr1[i];
+    // check if the element exists in the second array
+    if (!arr2.includes(element)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 function handleRedirect(link: string) {
   window.open(link, "_blank");
 }
@@ -41,18 +54,24 @@ const checkValueIncudesInArray = (arrStr: string[], str: string) =>
 let searchValue = "";
 let checkboxValues: string[] = [];
 
-function filterCards(searchVal: string, checkboxVal: string[]) {
+function filterCards(searchVal: string, categories: string[]) {
   listApps.forEach((card) => {
     const cardSearchValue =
       card.getAttribute("data-search")?.toLowerCase() || "";
     const cardCategoryValue =
       card.getAttribute("data-category")?.toLowerCase() || "";
 
+    const _cardCategoryValue = cardCategoryValue
+      .split(",")
+      .map((c) => c.trim());
+
     const hasSearchMatch = searchVal
       ? cardSearchValue.includes(searchVal)
       : true;
+
     const hasCheckboxMatch =
-      checkboxVal.length === 0 || checkboxVal.includes(cardCategoryValue);
+      categories.length === 0 ||
+      _cardCategoryValue.some((c) => categories.includes(c));
 
     if (hasSearchMatch && hasCheckboxMatch) {
       card.classList.remove("hide");
@@ -64,6 +83,7 @@ function filterCards(searchVal: string, checkboxVal: string[]) {
   const quantity = listApps.filter(
     (card) => !card.classList.contains("hide")
   ).length;
+
   appCount.innerText = `${quantity}`;
 }
 

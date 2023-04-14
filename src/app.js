@@ -16,21 +16,36 @@ function debounce(callback, waitFor) {
         return result;
     };
 }
+function compareArrays(arr1, arr2) {
+    // loop through the first array
+    for (let i = 0; i < arr1.length; i++) {
+        const element = arr1[i];
+        // check if the element exists in the second array
+        if (!arr2.includes(element)) {
+            return false;
+        }
+    }
+    return true;
+}
 function handleRedirect(link) {
     window.open(link, "_blank");
 }
 const checkValueIncudesInArray = (arrStr, str) => arrStr.some((item) => item.toLowerCase() === str.toLowerCase());
 let searchValue = "";
 let checkboxValues = [];
-function filterCards(searchVal, checkboxVal) {
+function filterCards(searchVal, categories) {
     listApps.forEach((card) => {
         var _a, _b;
         const cardSearchValue = ((_a = card.getAttribute("data-search")) === null || _a === void 0 ? void 0 : _a.toLowerCase()) || "";
         const cardCategoryValue = ((_b = card.getAttribute("data-category")) === null || _b === void 0 ? void 0 : _b.toLowerCase()) || "";
+        const _cardCategoryValue = cardCategoryValue
+            .split(",")
+            .map((c) => c.trim());
         const hasSearchMatch = searchVal
             ? cardSearchValue.includes(searchVal)
             : true;
-        const hasCheckboxMatch = checkboxVal.length === 0 || checkboxVal.includes(cardCategoryValue);
+        const hasCheckboxMatch = categories.length === 0 ||
+            _cardCategoryValue.some((c) => categories.includes(c));
         if (hasSearchMatch && hasCheckboxMatch) {
             card.classList.remove("hide");
         }
