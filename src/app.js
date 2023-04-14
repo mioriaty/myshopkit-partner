@@ -3,6 +3,7 @@ const sectionCard = document.getElementById("section-card");
 const checkboxGroup = Array.from(document.querySelectorAll(".checkbox-container input[type='checkbox']"));
 const inputSearch = document.getElementById("search-input");
 const clearButton = document.querySelector(".button-reset");
+const appCount = document.querySelector(".app-count");
 const listApps = Array.from(document.querySelectorAll("#section-card .card-app"));
 function debounce(callback, waitFor) {
     let timeout = 0;
@@ -31,14 +32,14 @@ function filterCards(searchVal, checkboxVal) {
             : true;
         const hasCheckboxMatch = checkboxVal.length === 0 || checkboxVal.includes(cardCategoryValue);
         if (hasSearchMatch && hasCheckboxMatch) {
-            card.classList.add("show");
             card.classList.remove("hide");
         }
         else {
             card.classList.add("hide");
-            card.classList.remove("show");
         }
     });
+    const quantity = listApps.filter((card) => !card.classList.contains("hide")).length;
+    appCount.innerText = `${quantity}`;
 }
 inputSearch.addEventListener("input", debounce((event) => {
     const target = event.target;

@@ -9,6 +9,8 @@ const clearButton = document.querySelector(
   ".button-reset"
 ) as HTMLButtonElement;
 
+const appCount = document.querySelector(".app-count") as HTMLSpanElement;
+
 const listApps = Array.from(
   document.querySelectorAll("#section-card .card-app")
 );
@@ -51,14 +53,18 @@ function filterCards(searchVal: string, checkboxVal: string[]) {
       : true;
     const hasCheckboxMatch =
       checkboxVal.length === 0 || checkboxVal.includes(cardCategoryValue);
+
     if (hasSearchMatch && hasCheckboxMatch) {
-      card.classList.add("show");
       card.classList.remove("hide");
     } else {
       card.classList.add("hide");
-      card.classList.remove("show");
     }
   });
+
+  const quantity = listApps.filter(
+    (card) => !card.classList.contains("hide")
+  ).length;
+  appCount.innerText = `${quantity}`;
 }
 
 inputSearch.addEventListener(
