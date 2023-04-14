@@ -16,158 +16,422 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="./src/normalize.css">
   <link rel="stylesheet" href="./src/app.css">
 </head>
 
 <body>
+  <!-- smartbar -->
+  <a href="#" class="smartbar" target="_blank">
+    <p>💥 Limited time offer: Unlock any Veda's plan FOR FREE 3 MONTHS!</p>
+  </a>
 
   <!-- header -->
-  <nav class="navbar navbar-expand-sm bg-light">
-
+  <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center p-0">
     <div class="container-fluid">
-      <!-- Links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 3</a>
-        </li>
-      </ul>
-    </div>
+      <a href="/" class="navbar-brand d-flex">
+        <img src="https://cdn.shopify.com/s/files/1/0732/6416/9268/files/logo.png?v=1681096404&height=100"
+          class="img-fluid" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
+        <ul class="navbar-nav w-100 justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Demo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exclusive Deal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Maximize Profit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Save Money</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Easy Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Rank top</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reviews</a>
+          </li>
+        </ul>
 
+        <ul class="nav navbar-nav justify-content-end">
+          <a href="#" target="_blank" role="button" class="btn try-for-free">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>Try for free</span>
+          </a>
+        </ul>
+      </div>
+    </div>
   </nav>
 
+  <section class="section-banner">
+    <div class="banner">
+      <div class="mask">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Built-In & Third-Party Add-Ons for Maximum Impact</h1>
+            <h4 class="mb-3">Veda is the ultimate solution to skyrocket your Shopify store's success.</h4>
+            <a class="btn" href="#" target="_blank" role="button">Explore Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid mx-auto">
+    <div class="total-app">0 App</div>
+  </section>
 
   <!-- section input -->
-  <section class="container mx-auto"></section>
+  <section class="container-fluid mx-auto">
+    <div class="flex justify-content-between">
+      <div class="input-container">
+        <input type="text" class="form-control" placeholder="Search apps" name="search" id="search-input" />
+      </div>
+
+      <button type="button" class="btn button-reset">Reset</button>
+    </div>
+  </section>
 
   <!-- section checkbox -->
-  <section class="container mx-auto">
-    <div class="row checkbox-container">
-      <!-- list checkbox -->
+  <section class="container-fluid mx-auto">
+    <div class="checkbox-container">
+      <div class="row ">
+        <!-- list checkbox -->
 
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="male" id="male" />
-          <label for="male">Male</label>
+        <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
+          <div class="flex align-items-center justify-center gap-2">
+            <input type="checkbox" name="male" id="male" value="male" />
+            <label for="male">Male</label>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="female" id="female" />
-          <label for="female">Female</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly1" id="weekly1" />
-          <label for="weekly1">weekly1</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly2" id="weekly2" />
-          <label for="weekly2">weekly2</label>
-        </div>
-      </div>
 
+        <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
+          <div class="flex align-items-center justify-center gap-2">
+            <input type="checkbox" name="female" id="female" value="female" />
+            <label for="female">Female</label>
+          </div>
+        </div>
 
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly3" id="weekly3" />
-          <label for="weekly3">weekly3</label>
-        </div>
       </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly4" id="weekly4" />
-          <label for="weekly4">weekly4</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly5" id="weekly5" />
-          <label for="weekly5">weekly5</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly6" id="weekly6" />
-          <label for="weekly6">weekly6</label>
-        </div>
-      </div>
-
-
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly7" id="weekly7" />
-          <label for="weekly7">weekly7</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly8" id="weekly8" />
-          <label for="weekly8">weekly8</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly9" id="weekly9" />
-          <label for="weekly9">weekly9</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly10" id="weekly10" />
-          <label for="weekly10">weekly10</label>
-        </div>
-      </div>
-
-
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly11" id="weekly11" />
-          <label for="weekly11">weekly11</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly12 " id="weekly12" />
-          <label for="weekly12">weekly12</label>
-        </div>
-      </div>
-      <div class=" col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly13" id="weekly13" />
-          <label for="weekly13">weekly13</label>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3 flex align-items-center justify-between p-2 my_checkbox">
-        <div class="flex align-items-center justify-center gap-2">
-          <input type="checkbox" class="" name="weekly14" id="weekly14" />
-          <label for="weekly14">weekly14</label>
-        </div>
-      </div>
-
-      <!-- /list checkbox -->
     </div>
   </section>
 
   <div style="height: 50px;"></div>
 
-
-
-  <section class="container mx-auto">
-    <div id="loading-spinner" class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-
+  <!-- section list apps -->
+  <section class="container-fluid mx-auto">
     <div id="section-card" class="row">
+
+      <div data-search="nooa.koskinen@example.com" data-category="male" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/men/62.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/men/62.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              male
+            </div>
+            <div class="_card-body__description">
+              Nooa Koskinen
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            nooa.koskinen@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="yanis.aubert@example.com" data-category="male" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/men/91.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/men/91.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              male
+            </div>
+            <div class="_card-body__description">
+              Yanis Aubert
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            yanis.aubert@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="josefina.ferrer@example.com" data-category="female" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/women/84.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/women/84.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              female
+            </div>
+            <div class="_card-body__description">
+              Josefina Ferrer
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            josefina.ferrer@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="evie.singh@example.com" data-category="female" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/women/17.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/women/17.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              female
+            </div>
+            <div class="_card-body__description">
+              Evie Singh
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            evie.singh@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="yilmaz.thoms@example.com" data-category="male" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/men/59.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/men/59.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              male
+            </div>
+            <div class="_card-body__description">
+              Yilmaz Thoms
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            yilmaz.thoms@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="sagar.bhardwaj@example.com" data-category="male" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/men/58.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/men/58.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              male
+            </div>
+            <div class="_card-body__description">
+              Sagar Bhardwaj
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            sagar.bhardwaj@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="giray.koyluoglu@example.com" data-category="male" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/men/92.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/men/92.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              male
+            </div>
+            <div class="_card-body__description">
+              Giray Köylüoğlu
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            giray.koyluoglu@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="audrey.campbell@example.com" data-category="female" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/women/28.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/women/28.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              female
+            </div>
+            <div class="_card-body__description">
+              Audrey Campbell
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            audrey.campbell@example.com
+          </div>
+        </div>
+      </div>
+
+      <div data-search="viivi.aho@example.com" data-category="female" class="card-app col-md-4">
+        <div class="card">
+          <!-- card head -->
+          <div class="_card-header">
+            <div class="_card-header__image">
+              <img class="img-fluid" src="https://randomuser.me/api/portraits/women/58.jpg">
+            </div>
+
+            <div>
+              <button type="button" class="_card-header__button"
+                onclick="handleRedirect('https://randomuser.me/api/portraits/women/58.jpg')">
+                Explore More</button>
+            </div>
+
+          </div>
+
+          <!-- card body -->
+          <div class="_card-body">
+            <div class="_card-body__title">
+              female
+            </div>
+            <div class="_card-body__description">
+              Viivi Aho
+            </div>
+          </div>
+
+          <!-- card footer -->
+          <div class="_card-footer">
+            viivi.aho@example.com
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </section>
 
